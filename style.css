@@ -1,28 +1,47 @@
 *{box-sizing:border-box}body{margin:0;font-family:Arial,'Noto Sans KR',sans-serif;background:#faf9f7;color:#29252a}button{font:inherit}.shell{max-width:480px;margin:auto;min-height:100vh;padding:24px 18px 90px}.eyebrow{font-size:12px;letter-spacing:.18em;font-weight:800;color:#766d77}.hero{padding-top:44px;text-align:center}.hero h1{font-size:38px;margin:14px 0 8px}.muted{color:#827982}.primary{border:0;border-radius:18px;background:#29252a;color:white;padding:15px 22px;font-weight:800;width:100%;cursor:pointer}.rabbit-scene{height:270px;background:#f3f0f4;border-radius:30px;display:flex;align-items:center;justify-content:center;margin:28px 0;position:relative;overflow:hidden}.rabbit{position:relative;width:120px;height:105px;background:#fff;border-radius:55% 55% 48% 48%;box-shadow:0 10px 30px #b9aec433}.ear{position:absolute;width:28px;height:75px;background:#fff;border-radius:50%;top:-55px}.ear:after{content:'';position:absolute;inset:11px 8px;background:#f7bdc8;border-radius:50%}.e1{left:20px;transform:rotate(-5deg)}.e2{right:20px;transform:rotate(5deg)}.eye{position:absolute;top:42px;width:8px;height:10px;background:#332b36;border-radius:50%}.eye.l{left:34px}.eye.r{right:34px}.nose{position:absolute;top:58px;left:55px;width:11px;height:8px;background:#f18cab;border-radius:50%}.mouth{position:absolute;top:66px;left:48px;font-size:22px}.cheek{position:absolute;top:58px;width:18px;height:9px;background:#f7c6d0;border-radius:50%;opacity:.7}.cheek.l{left:15px}.cheek.r{right:15px}.gear{position:absolute;font-size:48px;right:-27px;top:-18px}.water{position:absolute;bottom:40px;font-size:42px;color:#8ca9e8;letter-spacing:10px}.bubble{position:absolute;font-size:28px;top:48px;left:55px}.fish{position:absolute;font-size:25px;right:55px;top:72px}.card{background:white;border:1px solid #e6e0e5;border-radius:28px;padding:22px;margin-top:16px}.top{display:flex;justify-content:space-between;gap:16px}.xp{background:#f1f4ff;padding:10px 14px;border-radius:999px;font-size:12px;font-weight:800}.progress{height:10px;background:#eeeaf0;border-radius:999px;overflow:hidden}.progress i{display:block;height:100%;width:68%;background:#7192ee;border-radius:inherit}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.exp{border:1px solid #e5dfe5;background:white;border-radius:20px;padding:15px;text-align:left;cursor:pointer}.exp.selected{border:2px solid #8b78d5;background:#f6f2ff}.exp b{display:block;margin-top:8px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:9px 12px;border-radius:999px;border:1px solid #e3dde4;background:#fff;font-size:13px}.nav{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(444px,calc(100% - 24px));display:flex;justify-content:space-around;background:#fff;border:1px solid #e6e0e5;border-radius:22px;padding:12px;box-shadow:0 8px 30px #675b7015}.nav button{border:0;background:none}.stamp{border:1px dashed #b9a9be;border-radius:22px;padding:16px;display:flex;align-items:center;gap:14px;margin:12px 0}.mini{font-size:42px}.title{font-size:27px;margin:6px 0}.center{text-align:center}.space{height:18px}@media(min-width:800px){body{background:#f3f1ef}.shell{background:#faf9f7;box-shadow:0 0 60px #756b7818}}
 
-/* Exact reference character scene: no extraction, no halo, no clipping */
-.exact-rabbit-scene{
-  width:100%!important;
-  height:100%!important;
-  min-width:0!important;
-  overflow:hidden!important;
-  padding:0!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  background:#e8eef6!important;
+
+/* Clean dynamic character scene */
+.clean-scene{
+  height:244px;
+  background:#e5ebf3;
+  border-radius:26px;
+  overflow:hidden;
+  margin:28px 0;
+  position:relative;
 }
-.exact-scene-img{
-  display:block!important;
-  width:100%!important;
-  height:100%!important;
-  object-fit:cover!important;
-  object-position:center!important;
-  margin:0!important;
-  padding:0!important;
-  border:0!important;
-  border-radius:0!important;
-  box-shadow:none!important;
-  filter:none!important;
-  clip-path:none!important;
+.rabbit-clean-img{
+  position:absolute;
+  width:164px;
+  height:126px;
+  object-fit:cover;
+  left:50%;
+  top:49%;
+  transform:translate(-50%,-50%);
+  display:block;
+  border:0;
 }
+.scene-left,.scene-right{position:absolute;z-index:2;font-size:34px;top:22px}
+.scene-left{left:28px}.scene-right{right:28px}
+.scene-waves{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:#a898dd;font-size:27px;font-weight:800;letter-spacing:2px}
+.home-exp{min-height:105px}
+.home-exp.active{border:2px dashed #4f83ff;background:#f1f6ff}
+.home-icon{font-size:27px}
+.quest-card{margin-top:18px}
+
+/* LIFE XP brand */
+.brand-logo{display:inline-flex;align-items:center;gap:10px;margin:2px 0 12px;user-select:none}
+.brand-mark{width:42px;height:42px;border-radius:14px;background:#eef3ff;position:relative;display:inline-block}
+.brand-mark .ear{position:absolute;top:5px;width:8px;height:18px;border-radius:8px;background:#b8b5c8}
+.brand-mark .ear:after{content:"";position:absolute;inset:3px 2px;border-radius:6px;background:#ff9da8}
+.brand-mark .ear-l{left:11px;transform:rotate(-7deg)}
+.brand-mark .ear-r{right:11px;transform:rotate(7deg)}
+.brand-mark .face{position:absolute;left:9px;right:9px;bottom:6px;height:19px;border-radius:50%;background:#c9c7d3}
+.brand-mark .face b{position:absolute;top:7px;width:3px;height:5px;border-radius:3px;background:#40394a}
+.brand-mark .face b:first-child{left:7px}.brand-mark .face b:last-child{right:7px}
+.brand-word{display:flex;align-items:baseline;gap:5px;letter-spacing:-.8px}
+.brand-word strong{font-size:20px;font-weight:900}
+.brand-word em{font-size:20px;font-style:normal;font-weight:900;color:#4f83ff}
+.logo-gap{margin-top:8px}
+.logo-card-gap{margin-top:5px}
+.hero>.brand-logo{margin-bottom:18px}
